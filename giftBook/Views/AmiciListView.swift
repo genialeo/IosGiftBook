@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AmiciListView: View {
-  @State var showingAddAmico = false
+  @State private var showingAddAmico = false
   @EnvironmentObject var amici: Amici
   
   var body: some View {

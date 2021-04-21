@@ -8,31 +8,24 @@
 import SwiftUI
 
 struct AddRegaloView: View {
-  @ObservedObject var amico = Amico(nome: "")
-  @ObservedObject var regali = Regali()
-  //@EnvironmentObject var amici: Amici
+  @ObservedObject var regalo = Regalo(descrizione: "")
+  @ObservedObject var amico: Amico
   @Environment(\.presentationMode) var presentationMode
   
   var body: some View {
     NavigationView {
       VStack (spacing: 24) {
-        TextField("Regalo:", text: $amico.nome)
-        TextField("Prezzo:", text: $amico.nome)
-        TextField("Acquistato:", text: $amico.nome)
+        TextField("Regalo:", text: $regalo.descrizione)
+        //TextField("Prezzo:", text: Double($regalo.prezzo))
+        //TextField("Acquistato:", text: $regalo.nome)
       }
-      .navigationBarTitle("Regalo per \(amico.nome)")
+      .navigationBarTitle("Nuovo regalo per \(amico.nome)")
       .toolbar {
         ToolbarItem(placement: .status) {
           Button("Salva") {
-            print(amico.nome)
-            /*
-            amici.addAmico(amico)
-            
-            for friend: Amico in amici.lista {
-              print(friend.nome)
+            if let regali = amico.regali {
+              regali.addRegalo(Regalo(descrizione: regalo.descrizione))
             }
-            */
-            
             presentationMode.wrappedValue.dismiss()
           }
         }
@@ -44,6 +37,6 @@ struct AddRegaloView: View {
 
 struct AddRegaloView_Previews: PreviewProvider {
   static var previews: some View {
-    AddRegaloView().environmentObject(Regali())
+    AddRegaloView(amico: .init())
   }
 }

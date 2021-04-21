@@ -8,30 +8,29 @@
 import SwiftUI
 
 struct AmicoView: View {
-  @State var showingAddRegalo = false
-  let amico: Amico
+  @State private var showingAddRegalo = false
+  @ObservedObject var amico: Amico
+  
   var body: some View {
     if let regali = amico.regali {
       VStack {
-        
-          List {
-            ForEach(regali.lista) { regalo in
-              Text(regalo.descrizione)
+        List {
+          ForEach(regali.lista) { regalo in
+            Text(regalo.descrizione)
+          }
+        }
+        .navigationBarTitle("Regali per \(amico.nome)")
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button("Aggiungi") {
+              showingAddRegalo = true
             }
           }
-          .navigationBarTitle("Regali per \(amico.nome)")
-          .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-              Button("Aggiungi") {
-                showingAddRegalo = true
-              }
-            }
-          }
-          .sheet(
-            isPresented: $showingAddRegalo,
-            content: AddRegaloView.init
-          )
-        
+        }
+        .sheet(
+          isPresented: $showingAddRegalo) {
+          AddRegaloView(amico: amico)
+        }
       }
     }
     else {

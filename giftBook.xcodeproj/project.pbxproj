@@ -15,7 +15,6 @@
 		7C4DE5012629E919001D8263 /* AmiciRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE5002629E919001D8263 /* AmiciRow.swift */; };
 		7C4DE5082629F200001D8263 /* AmiciListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE5072629F200001D8263 /* AmiciListView.swift */; };
 		7C4DE50B2629F275001D8263 /* Dati.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE50A2629F275001D8263 /* Dati.swift */; };
-		7C4DE5102629F81B001D8263 /* RegaliView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE50F2629F81B001D8263 /* RegaliView.swift */; };
 		7C4DE514262A0223001D8263 /* AddAmicoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE513262A0223001D8263 /* AddAmicoView.swift */; };
 		7CCD68A4262F0AFF00A457AF /* Regalo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68A3262F0AFF00A457AF /* Regalo.swift */; };
 		7CCD68A7262F110000A457AF /* AmicoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68A6262F110000A457AF /* AmicoView.swift */; };
@@ -33,7 +32,6 @@
 		7C4DE5002629E919001D8263 /* AmiciRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiciRow.swift; sourceTree = "<group>"; };
 		7C4DE5072629F200001D8263 /* AmiciListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiciListView.swift; sourceTree = "<group>"; };
 		7C4DE50A2629F275001D8263 /* Dati.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dati.swift; sourceTree = "<group>"; };
-		7C4DE50F2629F81B001D8263 /* RegaliView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegaliView.swift; sourceTree = "<group>"; };
 		7C4DE513262A0223001D8263 /* AddAmicoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAmicoView.swift; sourceTree = "<group>"; };
 		7CCD68A3262F0AFF00A457AF /* Regalo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regalo.swift; sourceTree = "<group>"; };
 		7CCD68A6262F110000A457AF /* AmicoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmicoView.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				7C4DE4EA2629DC42001D8263 /* ContentView.swift */,
 				7C4DE5002629E919001D8263 /* AmiciRow.swift */,
 				7C4DE5072629F200001D8263 /* AmiciListView.swift */,
-				7C4DE50F2629F81B001D8263 /* RegaliView.swift */,
 				7C4DE513262A0223001D8263 /* AddAmicoView.swift */,
 				7CCD68A6262F110000A457AF /* AmicoView.swift */,
 				7CCD68A92630054200A457AF /* AddRegaloView.swift */,
@@ -196,7 +193,6 @@
 				7C4DE514262A0223001D8263 /* AddAmicoView.swift in Sources */,
 				7CCD68AA2630054300A457AF /* AddRegaloView.swift in Sources */,
 				7C4DE4EB2629DC42001D8263 /* ContentView.swift in Sources */,
-				7C4DE5102629F81B001D8263 /* RegaliView.swift in Sources */,
 				7C4DE4E92629DC42001D8263 /* giftBookApp.swift in Sources */,
 				7C4DE5012629E919001D8263 /* AmiciRow.swift in Sources */,
 				7C4DE50B2629F275001D8263 /* Dati.swift in Sources */,
