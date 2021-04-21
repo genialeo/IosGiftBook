@@ -8,14 +8,62 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+  @EnvironmentObject var amici: Amici
+  var body: some View {
+    TabView {
+      AmiciView()
+      RegaliDaComprareView()
+      RegaliCompratiView()
+      BudgetView()
     }
+    .padding()
+    .font(.headline)
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+  static var previews: some View {
+    ContentView()
+  }
+}
+
+struct AmiciView: View {
+  
+  var body: some View {
+    AmiciListView()
+    .tabItem {
+      Image(systemName: "person.3.fill")
+      Text("Amici")
     }
+  }
+}
+
+struct RegaliDaComprareView: View {
+  var body: some View {
+    Text("Another Tab")
+      .tabItem {
+        Image(systemName: "gift")
+        Text("Da comprare")
+      }
+  }
+}
+
+struct RegaliCompratiView: View {
+  var body: some View {
+    Text("Another Tab")
+      .tabItem {
+        Image(systemName: "gift.fill")
+        Text("Comprati")
+      }
+  }
+}
+
+struct BudgetView: View {
+  var body: some View {
+    Text("The Last Tab")
+      .tabItem {
+        Image(systemName: "dollarsign.square")
+        Text("Budget")
+      }
+  }
 }
