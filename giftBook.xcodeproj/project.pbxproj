@@ -11,14 +11,12 @@
 		7C4DE4EB2629DC42001D8263 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE4EA2629DC42001D8263 /* ContentView.swift */; };
 		7C4DE4ED2629DC44001D8263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4DE4EC2629DC44001D8263 /* Assets.xcassets */; };
 		7C4DE4F02629DC44001D8263 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4DE4EF2629DC44001D8263 /* Preview Assets.xcassets */; };
-		7C4DE4FE2629E169001D8263 /* Amico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE4FD2629E169001D8263 /* Amico.swift */; };
-		7C4DE5012629E919001D8263 /* AmiciRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE5002629E919001D8263 /* AmiciRow.swift */; };
-		7C4DE5082629F200001D8263 /* AmiciListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE5072629F200001D8263 /* AmiciListView.swift */; };
-		7C4DE50B2629F275001D8263 /* Dati.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE50A2629F275001D8263 /* Dati.swift */; };
-		7C4DE514262A0223001D8263 /* AddAmicoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DE513262A0223001D8263 /* AddAmicoView.swift */; };
-		7CCD68A4262F0AFF00A457AF /* Regalo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68A3262F0AFF00A457AF /* Regalo.swift */; };
-		7CCD68A7262F110000A457AF /* AmicoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68A6262F110000A457AF /* AmicoView.swift */; };
-		7CCD68AA2630054300A457AF /* AddRegaloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68A92630054200A457AF /* AddRegaloView.swift */; };
+		7CCD68B226306F6800A457AF /* Amico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68B126306F6800A457AF /* Amico.swift */; };
+		7CCD68B8263077A900A457AF /* AmicoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68B7263077A900A457AF /* AmicoList.swift */; };
+		7CCD68BC2630845900A457AF /* AmicoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68BB2630845900A457AF /* AmicoDetail.swift */; };
+		7CCD68BF263086DE00A457AF /* AddAmico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68BE263086DE00A457AF /* AddAmico.swift */; };
+		7CCD68C22630958600A457AF /* Regalo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68C12630958600A457AF /* Regalo.swift */; };
+		7CCD68C626309CCC00A457AF /* AddRegalo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD68C526309CCC00A457AF /* AddRegalo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,14 +26,12 @@
 		7C4DE4EC2629DC44001D8263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C4DE4EF2629DC44001D8263 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C4DE4F12629DC44001D8263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C4DE4FD2629E169001D8263 /* Amico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amico.swift; sourceTree = "<group>"; };
-		7C4DE5002629E919001D8263 /* AmiciRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiciRow.swift; sourceTree = "<group>"; };
-		7C4DE5072629F200001D8263 /* AmiciListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiciListView.swift; sourceTree = "<group>"; };
-		7C4DE50A2629F275001D8263 /* Dati.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dati.swift; sourceTree = "<group>"; };
-		7C4DE513262A0223001D8263 /* AddAmicoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAmicoView.swift; sourceTree = "<group>"; };
-		7CCD68A3262F0AFF00A457AF /* Regalo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regalo.swift; sourceTree = "<group>"; };
-		7CCD68A6262F110000A457AF /* AmicoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmicoView.swift; sourceTree = "<group>"; };
-		7CCD68A92630054200A457AF /* AddRegaloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegaloView.swift; sourceTree = "<group>"; };
+		7CCD68B126306F6800A457AF /* Amico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amico.swift; sourceTree = "<group>"; };
+		7CCD68B7263077A900A457AF /* AmicoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AmicoList.swift; path = giftBook/Views/AmicoList.swift; sourceTree = SOURCE_ROOT; };
+		7CCD68BB2630845900A457AF /* AmicoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmicoDetail.swift; sourceTree = "<group>"; };
+		7CCD68BE263086DE00A457AF /* AddAmico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAmico.swift; sourceTree = "<group>"; };
+		7CCD68C12630958600A457AF /* Regalo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regalo.swift; sourceTree = "<group>"; };
+		7CCD68C526309CCC00A457AF /* AddRegalo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegalo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +83,8 @@
 		7C4DE4F82629DC55001D8263 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7C4DE4FD2629E169001D8263 /* Amico.swift */,
-				7CCD68A3262F0AFF00A457AF /* Regalo.swift */,
-				7C4DE50A2629F275001D8263 /* Dati.swift */,
+				7CCD68B126306F6800A457AF /* Amico.swift */,
+				7CCD68C12630958600A457AF /* Regalo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,12 +92,11 @@
 		7C4DE4F92629DC5B001D8263 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7CCD68B7263077A900A457AF /* AmicoList.swift */,
 				7C4DE4EA2629DC42001D8263 /* ContentView.swift */,
-				7C4DE5002629E919001D8263 /* AmiciRow.swift */,
-				7C4DE5072629F200001D8263 /* AmiciListView.swift */,
-				7C4DE513262A0223001D8263 /* AddAmicoView.swift */,
-				7CCD68A6262F110000A457AF /* AmicoView.swift */,
-				7CCD68A92630054200A457AF /* AddRegaloView.swift */,
+				7CCD68BB2630845900A457AF /* AmicoDetail.swift */,
+				7CCD68BE263086DE00A457AF /* AddAmico.swift */,
+				7CCD68C526309CCC00A457AF /* AddRegalo.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,16 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CCD68A4262F0AFF00A457AF /* Regalo.swift in Sources */,
-				7C4DE4FE2629E169001D8263 /* Amico.swift in Sources */,
-				7CCD68A7262F110000A457AF /* AmicoView.swift in Sources */,
-				7C4DE5082629F200001D8263 /* AmiciListView.swift in Sources */,
-				7C4DE514262A0223001D8263 /* AddAmicoView.swift in Sources */,
-				7CCD68AA2630054300A457AF /* AddRegaloView.swift in Sources */,
 				7C4DE4EB2629DC42001D8263 /* ContentView.swift in Sources */,
+				7CCD68BC2630845900A457AF /* AmicoDetail.swift in Sources */,
+				7CCD68B226306F6800A457AF /* Amico.swift in Sources */,
+				7CCD68BF263086DE00A457AF /* AddAmico.swift in Sources */,
 				7C4DE4E92629DC42001D8263 /* giftBookApp.swift in Sources */,
-				7C4DE5012629E919001D8263 /* AmiciRow.swift in Sources */,
-				7C4DE50B2629F275001D8263 /* Dati.swift in Sources */,
+				7CCD68C626309CCC00A457AF /* AddRegalo.swift in Sources */,
+				7CCD68C22630958600A457AF /* Regalo.swift in Sources */,
+				7CCD68B8263077A900A457AF /* AmicoList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

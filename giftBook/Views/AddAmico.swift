@@ -1,15 +1,15 @@
 //
-//  AddAmicoView.swift
+//  AddAmico.swift
 //  giftBook
 //
-//  Created by Fenu, Leonardo on 16/04/2021.
+//  Created by Fenu, Leonardo on 21/04/2021.
 //
 
 import SwiftUI
 
-struct AddAmicoView: View {
+struct AddAmico: View {
   @ObservedObject var amico = Amico(nome: "")
-  @EnvironmentObject var amici: Amici
+  @EnvironmentObject var amicoStore: AmicoStore
   @Environment(\.presentationMode) var presentationMode
   
   var body: some View {
@@ -21,7 +21,7 @@ struct AddAmicoView: View {
       .toolbar {
         ToolbarItem(placement: .status) {
           Button("Salva") {
-            amici.addAmico(amico)
+            amicoStore.addAmico(nome: amico.nome)
             presentationMode.wrappedValue.dismiss()
           }
         }
@@ -31,8 +31,8 @@ struct AddAmicoView: View {
   }
 }
 
-struct AddAmicoView_Previews: PreviewProvider {
+struct AddAmico_Previews: PreviewProvider {
   static var previews: some View {
-    AddAmicoView().environmentObject(Amici())
+    AddAmico()
   }
 }

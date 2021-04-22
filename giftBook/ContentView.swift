@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-  @EnvironmentObject var amici: Amici
   var body: some View {
     TabView {
       AmiciView()
@@ -30,7 +29,7 @@ struct ContentView_Previews: PreviewProvider {
 struct AmiciView: View {
   
   var body: some View {
-    AmiciListView()
+    AmicoList()
     .tabItem {
       Image(systemName: "person.3.fill")
       Text("Amici")

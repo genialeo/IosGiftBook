@@ -2,17 +2,19 @@
 //  Amico.swift
 //  giftBook
 //
-//  Created by Fenu, Leonardo on 16/04/2021.
+//  Created by Fenu, Leonardo on 21/04/2021.
 //
-import Combine
+
+import Foundation
 
 class Amico: ObservableObject {
-  @Published var nome: String
-  @Published var regali: Regali?
+  var nome: String
+  @Published var regali: RegaloStore
   
   init(
-    nome: String = "Nessuno",
-    regali: Regali = Regali() ) {
+    nome: String = "Nessun amico",
+    regali: RegaloStore = RegaloStore() )
+  {
     self.nome = nome
     self.regali = regali
   }
@@ -29,3 +31,28 @@ extension Amico: Equatable {
     lhs === rhs
   }
 }
+
+class AmicoStore: ObservableObject {
+  static let defaultAmici = [
+    Amico(nome: "Pino", regali: RegaloStore()),
+    Amico(nome: "Gino", regali: RegaloStore()),
+    Amico(nome: "Lino", regali: RegaloStore()),
+  ]
+  
+  static func loadAmici() -> [Amico] {
+    AmicoStore.defaultAmici
+  }
+  
+  @Published var amici = loadAmici()
+  
+  func addAmico(nome: String) {
+    let newAmico = Amico(nome: nome)
+    amici.append(newAmico)
+  }
+  
+  func deleteAmico(at offsets: IndexSet) {
+    amici.remove(atOffsets: offsets)
+  }
+}
+
+

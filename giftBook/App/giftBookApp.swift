@@ -11,7 +11,7 @@ import SwiftUI
 struct giftBookApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(Amici())
+            ContentView().environmentObject(AmicoStore())
         }
     }
 }
