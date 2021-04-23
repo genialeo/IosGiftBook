@@ -14,7 +14,7 @@ struct AmicoList: View {
   var body: some View {
     NavigationView {
       List {
-        ForEach(amicoStore.amici, id: \.self) { amico in
+        ForEach(amicoStore.amici) { amico in
           AmicoRowView(amico: amico)
         }
       }
@@ -40,12 +40,22 @@ struct AmicoRowView: View {
     NavigationLink(destination: AmicoDetail(amico: amico, regali: amico.regali)) {
       VStack {
         Text(amico.nome)
-          .font(.title2)
-        Text(amico.nome)
-          .font(.title3)
+          .font(.title)
+        Text("\(amico.regali.lista.count) regali")
+          .font(.callout)
           .foregroundColor(.secondary)
       }
     }
+    /*
+    .onAppear {
+      print("\(amico.nome)")
+      let regali = amico.regali.lista
+      print(amico.regali.id)
+      for regalo in regali {
+        print ("\(regalo.id):\(regalo.descrizione):\(regalo.prezzo)")
+      }
+    }
+  */
   }
 }
 

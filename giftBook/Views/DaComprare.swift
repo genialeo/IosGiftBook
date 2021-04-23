@@ -1,33 +1,30 @@
 //
-//  Comprati.swift
+//  DaComprare.swift
 //  giftBook
 //
-//  Created by Fenu, Leonardo on 22/04/2021.
+//  Created by Fenu, Leonardo on 23/04/2021.
 //
 
 import SwiftUI
 
-struct Comprati: View {
+struct DaComprare: View {
   @EnvironmentObject var amicoStore: AmicoStore
   
   var body: some View {
     NavigationView {
       List{
         ForEach(amicoStore.amici) {amico in
-          let acquistati: () = amico.regali.loadAcquistati()
-          ForEach(amico.regali.listaAcquistati) {regalo in
+          let daAcquistare: () = amico.regali.loadDaAcquistare()
+          ForEach(amico.regali.listaDaAcquistare) {regalo in
             CompratiRowView(amico: amico, regalo: regalo)
           }
         }
-      }.navigationBarTitle(Text("Acquistati"))
-    }
-    .onAppear {
-      print("Appaio")
+      }.navigationBarTitle(Text("Da acquistare"))
     }
   }
 }
 
-struct CompratiRowView: View {
+struct DaComprareRowView: View {
   var amico: Amico
   var regalo: Regalo
   var body: some View {
@@ -43,10 +40,10 @@ struct CompratiRowView: View {
   }
 }
 
-struct Comprati_Previews: PreviewProvider {
+
+struct DaComprare_Previews: PreviewProvider {
   static var previews: some View {
-    Comprati()
+    DaComprare()
   }
 }
-
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EditRegalo: View {
   @ObservedObject var regalo: Regalo
+  @EnvironmentObject var store: AmicoStore
   @Environment(\.presentationMode) var presentationMode
   
   var body: some View {
@@ -24,7 +25,7 @@ struct EditRegalo: View {
       .toolbar {
         ToolbarItem(placement: .status) {
           Button("Salva") {
-            //amico.regali.editRegalo(regalo: $regalo)
+            store.editRegalo()
             presentationMode.wrappedValue.dismiss()
           }
         }

@@ -36,7 +36,15 @@ class AmicoStore: ObservableObject {
   static let defaultAmici = [
     Amico(nome: "Pino", regali: RegaloStore()),
     Amico(nome: "Gino", regali: RegaloStore()),
+    /*
     Amico(nome: "Lino", regali: RegaloStore()),
+    Amico(nome: "Cino", regali: RegaloStore()),
+    Amico(nome: "Dino", regali: RegaloStore()),
+    Amico(nome: "Mino", regali: RegaloStore()),
+    Amico(nome: "Nino", regali: RegaloStore()),
+    Amico(nome: "Rino", regali: RegaloStore()),
+    Amico(nome: "Tino", regali: RegaloStore()),
+    */
   ]
   
   static func loadAmici() -> [Amico] {
@@ -52,6 +60,10 @@ class AmicoStore: ObservableObject {
   
   func deleteAmico(at offsets: IndexSet) {
     amici.remove(atOffsets: offsets)
+  }
+  
+  func editRegalo() {
+    objectWillChange.send()
   }
 }
 

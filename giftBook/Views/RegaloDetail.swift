@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegaloDetail: View {
   @ObservedObject var regalo: Regalo
+  @ObservedObject var amico: Amico
   @State private var showingEditRegalo = false
   
   var body: some View {
@@ -39,3 +40,4 @@ struct RegaloDetail_Previews: PreviewProvider {
     EditRegalo(regalo: Regalo())
   }
 }
+

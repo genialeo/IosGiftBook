@@ -8,7 +8,8 @@
 import Foundation
 
 class Regalo: ObservableObject {
-  var descrizione: String
+  let id: String
+  @Published var descrizione: String
   //var prezzo: Double
   @Published var prezzo: String
   @Published var acquistato: Bool
@@ -19,6 +20,7 @@ class Regalo: ObservableObject {
     prezzo: String = "0.0",
     acquistato: Bool = false)
   {
+    self.id = UUID().uuidString
     self.descrizione = descrizione
     self.prezzo = prezzo
     self.acquistato = acquistato
@@ -39,26 +41,35 @@ extension Regalo: Equatable {
 }
 
 class RegaloStore: ObservableObject {
-  static let defaultRegali = [
-    Regalo(descrizione: "Libro", prezzo: "20.0", acquistato: true ),
-    Regalo(descrizione: "DVD", prezzo: "10.0", acquistato: false),
-    Regalo(descrizione: "CD", prezzo: "5.0", acquistato: false),
-    Regalo(descrizione: "Vinile", prezzo: "15.0", acquistato: true),
+  let id = UUID()
+  @Published var listaAcquistati: [Regalo] = []
+  @Published var listaDaAcquistare: [Regalo] = []
+  
+  @Published var lista: [Regalo] = [
+    .init(descrizione: "Libro", prezzo: "20.0", acquistato: true ),
+    .init(descrizione: "DVD", prezzo: "10.0", acquistato: false),
+    /*
+    .init(descrizione: "CD", prezzo: "5.0", acquistato: false),
+    .init(descrizione: "Vinile", prezzo: "11.0", acquistato: false),
+    .init(descrizione: "Ombrello", prezzo: "5.0", acquistato: false),
+    .init(descrizione: "Poster", prezzo: "12.0", acquistato: true),
+    .init(descrizione: "Dinosauro", prezzo: "15.0", acquistato: true),
+    .init(descrizione: "Bambola", prezzo: "30.0", acquistato: true),
+    .init(descrizione: "Gioco", prezzo: "40.0", acquistato: true),
+    .init(descrizione: "VideoGame", prezzo: "60.0", acquistato: false),
+    */
   ]
   
-  static func loadTutti() -> [Regalo] {
-    RegaloStore.defaultRegali
+  func loadAcquistati()  {
+    for regalo in (lista.filter{$0.acquistato}) {
+      print ("\(regalo.id):\(regalo.descrizione):\(regalo.prezzo)")
+    }
+    listaAcquistati = lista.filter{$0.acquistato}
   }
   
- func acquistati() -> [Regalo] {
-    lista.filter{$0.acquistato}
+  func loadDaAcquistare()  {
+    listaDaAcquistare = lista.filter{$0.acquistato == false}
   }
-  
-  func daAcquistare() -> [Regalo] {
-    lista.filter{$0.acquistato == false}
-  }
-  
-  @Published var lista = loadTutti()
   
   //func addRegalo(descrizione: String, prezzo: Double, acquistato: Bool) {
   func addRegalo(descrizione: String, prezzo: String, acquistato: Bool) {
