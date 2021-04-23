@@ -15,8 +15,12 @@ struct AddRegalo: View {
   
   var body: some View {
     NavigationView {
-      VStack (spacing: 24) {
+      VStack (alignment: .leading, spacing: 24) {
+        Text("Cosa vuoi comprare?")
         TextField("Regalo", text: $regalo.descrizione)
+        Text("Quanto costa?")
+        TextField("Prezzo", text: $regalo.prezzo)
+        //TextField("Prezzo", value: $regalo.prezzo, formatter: NumberFormatter())
         Toggle(isOn: $regalo.acquistato) {
           Text("Acquistato")
         }
@@ -25,7 +29,7 @@ struct AddRegalo: View {
       .toolbar {
         ToolbarItem(placement: .status) {
           Button("Salva") {
-            amico.regali.addRegalo(descrizione: regalo.descrizione, prezzo: 10.0, acquistato: regalo.acquistato)
+            amico.regali.addRegalo(descrizione: regalo.descrizione, prezzo: regalo.prezzo, acquistato: regalo.acquistato)
             presentationMode.wrappedValue.dismiss()
           }
         }
@@ -34,11 +38,11 @@ struct AddRegalo: View {
     }
   }
 }
-  
-  
-  struct AddRegalo_Previews: PreviewProvider {
-    static var previews: some View {
-      AddRegalo(amico: Amico(), regali: RegaloStore())
-    }
+
+struct AddRegalo_Previews: PreviewProvider {
+  static var previews: some View {
+    AddRegalo(amico: Amico(), regali: RegaloStore())
   }
+}
+
 

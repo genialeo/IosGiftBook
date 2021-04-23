@@ -15,7 +15,7 @@ struct AmicoDetail: View {
   var body: some View {
     List {
       ForEach(regali.lista, id: \.self) { regalo in
-        Text(regalo.descrizione)
+        RegaloRowView(regalo: regalo)
       }
     }
     .navigationBarTitle("Regali per \(amico.nome)")
@@ -31,6 +31,19 @@ struct AmicoDetail: View {
       AddRegalo(amico: amico, regali: regali)
       }
   }
+  
+}
+  
+  struct RegaloRowView: View {
+    var regalo: Regalo
+    var body: some View {
+      NavigationLink(destination: RegaloDetail(regalo: regalo)) {
+        VStack {
+          Text(regalo.descrizione)
+            .font(.title2)
+        }
+      }
+    }
 }
 
 struct AmicoDetail_Previews: PreviewProvider {

@@ -30,16 +30,16 @@ struct AmiciView: View {
   
   var body: some View {
     AmicoList()
-    .tabItem {
-      Image(systemName: "person.3.fill")
-      Text("Amici")
-    }
+      .tabItem {
+        Image(systemName: "person.3.fill")
+        Text("Amici")
+      }
   }
 }
 
 struct RegaliDaComprareView: View {
   var body: some View {
-    Text("Another Tab")
+    DaComprare()
       .tabItem {
         Image(systemName: "gift")
         Text("Da comprare")
@@ -49,7 +49,7 @@ struct RegaliDaComprareView: View {
 
 struct RegaliCompratiView: View {
   var body: some View {
-    Text("Another Tab")
+    Comprati()
       .tabItem {
         Image(systemName: "gift.fill")
         Text("Comprati")
@@ -59,7 +59,7 @@ struct RegaliCompratiView: View {
 
 struct BudgetView: View {
   var body: some View {
-    Text("The Last Tab")
+    Text("To be done")
       .tabItem {
         Image(systemName: "dollarsign.square")
         Text("Budget")
